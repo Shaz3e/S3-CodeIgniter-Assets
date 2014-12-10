@@ -1,8 +1,6 @@
-CodeIgniter-Assets
+CodeIgniter-Assets with Header & Footer
 ==================
 
 How to use header/footer/assets in CodeIgniter
 
-
-
-$autoload['helper'] = array('url', 'assets');
+[Read Tutorial](http://blog.shaz3e.com/how-to-use-header-footer-assets-in-codeigniter/)
