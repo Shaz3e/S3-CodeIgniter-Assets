@@ -1,0 +1,122 @@
+@media screen and (min-width:801px){
+	.dc-404-layout{text-align:center;width:90%;margin:auto;}
+	.dc-404{
+		background-image:url(../images/404-page-not-found.png);
+		background-position:center center;
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		width:400px;
+		height:245px;
+		margin:auto;
+	}
+	.dc-404-head{}
+	.dc-404-head h1 span{
+		margin:0;
+		padding:0;
+	}
+	.dc-404-head h2 span{}
+	.dc-404-head h1 span,.dc-404-head h2 span{display:none;}
+	.dc-404-body{}
+	.dc-404-body h2{}
+	.dc-404-body ul{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+	.dc-404-body ul li{
+		width:100%;
+		padding:0.5em;
+		margin:auto;
+		display:block;
+		border-bottom:solid 1px #f1f1f1;
+	}
+	.dc-404-body ul li:hover{border-bottom:solid 1px #222;}
+	a.dc-404-goto-home{
+		display:block;
+		margin:1em auto;
+		padding:0.5em;
+		color:#f1f1f1;
+		text-decoration:none;
+		background-color:#000;
+	
+		width:50%;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+	}
+	a.dc-404-goto-home:hover{
+		color:#000;
+		background-color:#f1f1f1;
+	}
+	.dc-404-error-message{
+		padding:0.5em;
+		color:#5a5a5a;
+	}
+	.dc-404-error-message-notice{
+		padding:0.5em;
+		color:#ed1c24;
+		font-size:120%;
+	}
+}
+@media screen and (max-width:800px){
+	.dc-404-layout{text-align:center;width:90%;margin:auto;}
+	.dc-404{
+		background-image:url(../images/404-page-not-found.png);
+		background-position:center center;
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		width:150px;
+		height:92px;
+		margin:auto;
+		display:inline-block;
+	}
+	.dc-404-head{}
+	.dc-404-head h1 span{
+		margin:0;
+		padding:0;
+	}
+	.dc-404-head h2 span{}
+	.dc-404-head h1 span,.dc-404-head h2 span{display:none;}
+	.dc-404-body{}
+	.dc-404-body h2{}
+	.dc-404-body ul{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+    .dc-404-body h2{font-size:80%;}
+	.dc-404-body ul li{
+		width:100%;
+		padding:0.5em;
+		margin:auto;
+		display:block;
+		border-bottom:solid 1px #f1f1f1;
+	}
+	.dc-404-body ul li:hover{border-bottom:solid 1px #222;}
+	a.dc-404-goto-home{
+		display:block;
+		margin:1em auto;
+		padding:0.5em;
+		color:#f1f1f1;
+		text-decoration:none;
+		background-color:#000;
+	
+		width:50%;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+	}
+	a.dc-404-goto-home:hover{
+		color:#000;
+		background-color:#f1f1f1;
+	}
+	.dc-404-error-message{
+		padding:0.5em;
+		color:#5a5a5a;
+	}
+	.dc-404-error-message-notice{
+		padding:0.5em;
+		color:#ed1c24;
+		font-size:120%;
+	}
+}

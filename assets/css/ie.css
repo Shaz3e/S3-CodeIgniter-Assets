@@ -1,0 +1,10 @@
+@media \0screen {
+  img { 
+  	width: auto; /* for ie 8 */
+  }
+}
+/* IE Warning */
+.dc-broswer-alert{text-align:center;}
+.dc-broswer-alert p{padding:0.5em;}
+.dc-broswer-alert p a{text-decoration:none;}
+.dc-broswer-alert p a:hover{text-decoration:underline;}

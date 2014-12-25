@@ -1,0 +1,142 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on Shaz3e S3 Framework             ||
+|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
+|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of shaz3e.com                         ||
+|| # for more information visit http://www.shaz3e.com/                  ||
+|| # Redistribution and  colification of this software                  ||
+|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
+|| # A project of DiligentCreators - Construcing Ideas...               ||
+|| #################################################################### ||
+\*======================================================================*/
+
+
+*{}
+
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body{margin:0;padding:0;}
+
+/* Set Gutter */
+@gutter: 5px;
+
+.row{
+	position:relative;
+	display:block;
+	width:90%;
+	max-width:1200px;
+	margin:auto;
+	&:last-child{
+		margin-bottom:0 !important;
+	}
+	
+	&:before,&:after{display: table; content:" ";}
+	&:after{clear:both;}
+}
+
+/* Columns & Grid */
+.grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-7,.grid-8,.grid-9,.grid-10,.grid-11,.grid-12,
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+	position:relative;
+	min-height:1px;
+	float:left;
+}
+
+.block{
+	position:relative;
+	min-height:1px;
+	padding:5px; /* Padding can be set as @gutter*/
+	margin-top:0;
+	margin-right:@gutter;
+	margin-bottom:@gutter * 2;
+	margin-left:@gutter;
+
+	&:last-child{
+		//margin-bottom:0 !important;
+	}
+}
+
+/* Full width block i.e. (.full-width .block)
+**********************************************/
+.full-width{
+    margin:0px !important;
+    padding:0 !important;
+	display:block;
+}
+
+/* default width variable */
+@width:100%;
+
+/* Media Queries
+*********************************************/
+
+/* First Generation Mobile Device */
+@media (max-width: 480px){
+
+	.col-1,.col-2,.col-3,
+	.col-4,.col-5,.col-6,
+	.col-7,.col-8,.col-9,
+	.col-10,.col-11,
+	.col-12{width:@width / 1 !important;}
+
+}
+@media (max-width: 768px){
+	.grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,
+	.grid-7,.grid-8,.grid-9,.grid-10,.grid-11,.grid-12{width:100%;}
+
+	.col-1,.col-3,.col-5,.col-7,.col-9,.col-11{width:@width;}
+	.col-2,.col-4,.col-8{width:@width / 2;}
+	.col-6,.col-12{width:@width / 3;}
+	.col-10{width:@width / 5;}
+	
+}
+@media (min-width: 769px) and (max-width: 1023px){
+	
+	.grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,
+	.grid-7,.grid-8,.grid-9,.grid-10,.grid-11,.grid-12{width:50%;}
+
+	.col-1,.col-3,.col-5,.col-7,.col-9,.col-11{width:@width;}
+	.col-2,.col-4{width:@width / 2;}
+	.col-6{width:@width / 3;}
+	.col-8{width:@width / 4;}
+	.col-10{width:@width / 5;}
+	.col-12{width:@width / 6;}
+}
+
+
+@media (min-width:1024px){
+	.grid-1	{width: 8.33333333%;}
+	.grid-2	{width: 16.66666667%;}
+	.grid-3	{width: 25%;}
+	.grid-4	{width: 33.33333333%;}
+	.grid-5	{width: 41.66666667%;}
+	.grid-6	{width: 50%;}
+	.grid-7	{width: 58.33333333%;}
+	.grid-8	{width: 66.66666667%;}
+	.grid-9	{width: 75%;}
+	.grid-10{width: 83.33333333%;}
+	.grid-11{width: 91.66666667%;}
+	.grid-12{width: 100%;}
+
+	.col-1	{width: @width;}
+	.col-2	{width: @width / 2;}
+	.col-3	{width: @width / 3;}
+	.col-4	{width: @width / 4;}
+	.col-5	{width: @width / 5;}
+	.col-6	{width: @width / 6;}
+	.col-7	{width: @width / 7;}
+	.col-8	{width: @width / 8;}
+	.col-9	{width: @width / 9;}
+	.col-10	{width: @width / 10;}
+	.col-11	{width: @width / 11;}
+	.col-12	{width: @width / 12;}
+}
+
+/* responsive image with IE8 included template/css/ie.css */
+img{max-width:100%;height:auto;}

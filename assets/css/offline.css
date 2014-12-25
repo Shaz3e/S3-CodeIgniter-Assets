@@ -1,0 +1,153 @@
+.dc-offline-system-message{
+    padding:0.5em;
+    color:red;
+}
+.dc-offline-system-message ul{margin:0;padding:0;list-style-type:none;}
+.dc-offline-system-message ul li{}
+.dc-offline-system-message dt.error{font-weight:bold;}
+@media screen and (min-width:801px){
+    .dc-offline{
+        padding:5%;
+        display:block;
+        margin:auto;
+        width:90%;
+        text-align:center;
+    }
+    .dc-offline-image{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .dc-offline-sitename{}
+    .dc-offline-sitename h1{
+        margin:0;
+        padding:0;
+    }
+    .dc-offline-message{
+        padding:0.5em;
+    }
+    .dc-offline-login-form{}
+    form#dc-ofline-form{}
+    form#dc-ofline-form fieldset{
+        display:block;
+        width:25%;
+        margin:auto;
+        border:solid 1px #f1f1f1;
+    }
+    form#dc-ofline-form legend{
+        padding:0.5em;
+        font-size:200%;
+    }
+    .dc-offline-fieldset{}
+    .dc-offline-username,.dc-offline-password,.dc-offline-remember{
+        margin:0.5em;
+        padding:.5em;
+    }
+    .dc-offline-username{}
+    .dc-offline-password{}
+    .dc-offline-remember{}
+    .dc-offline-login-button{}
+    span.dc-offline-label{}
+    span.dc-offline-label label{}
+    span.dc-offline-input input.dc-offline-inputbox{
+        outline:0 !important;
+        padding:0.5em;
+        background-color:#fff;
+        border:solid 1px #f1f1f1;
+    }
+    span.dc-offline-input input.dc-offline-inputbox:hover,
+    span.dc-offline-input input.dc-offline-inputbox:active,
+    span.dc-offline-input input.dc-offline-inputbox:focus{
+        border:solid 1px #222;
+        background-color:#f1f1f1;
+    }
+    input.dc-offline-login-button{
+        cursor:pointer;
+        background-color:#222;
+        border:none;
+        color:#f1f1f1;
+        padding:0.5em;
+        margin:0.5em;
+        
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+    }
+    input.dc-offline-login-button:hover{
+        background-color:#f1f1f1;
+        color:#000;
+    }
+}
+@media screen and (max-width:800px){
+    .dc-offline{
+        padding:5%;
+        display:block;
+        margin:auto;
+        width:90%;
+        text-align:center;
+    }
+    .dc-offline-image{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .dc-offline-sitename{}
+    .dc-offline-sitename h1{
+        margin:0;
+        padding:0;
+    }
+    .dc-offline-message{
+        padding:0.5em;
+    }
+    .dc-offline-login-form{}
+    form#dc-ofline-form{}
+    form#dc-ofline-form fieldset{
+        display:block;
+        width:80%;
+        margin:auto;
+        border:solid 1px #f1f1f1;
+    }
+    form#dc-ofline-form legend{
+        padding:0.5em;
+        font-size:200%;
+    }
+    .dc-offline-fieldset{}
+    .dc-offline-username,.dc-offline-password,.dc-offline-remember{
+        margin:0.5em;
+        padding:.5em;
+    }
+    .dc-offline-username{}
+    .dc-offline-password{}
+    .dc-offline-remember{}
+    .dc-offline-login-button{}
+    span.dc-offline-label{}
+    span.dc-offline-label label{}
+    span.dc-offline-input input.dc-offline-inputbox{
+        outline:0 !important;
+        padding:0.5em;
+        background-color:#fff;
+        border:solid 1px #f1f1f1;
+    }
+    span.dc-offline-input input.dc-offline-inputbox:hover,
+    span.dc-offline-input input.dc-offline-inputbox:active,
+    span.dc-offline-input input.dc-offline-inputbox:focus{
+        border:solid 1px #222;
+        background-color:#f1f1f1;
+    }
+    input.dc-offline-login-button{
+        cursor:pointer;
+        background-color:#222;
+        border:none;
+        color:#f1f1f1;
+        padding:0.5em;
+        margin:0.5em;
+        
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+    }
+    input.dc-offline-login-button:hover{
+        background-color:#f1f1f1;
+        color:#000;
+    }
+}
