@@ -1,4 +1,5 @@
 @import "../../css/template.less"; // grid file
+@import "menu.less"; // default menu
 @import "variables-mixin.less"; // all variable and mixin
 @import "theme-modules.less"; // theme extra modules
 @import "buttons.less"; // button styles
@@ -11,6 +12,7 @@
 	.collapse {
 		display:block !important;
 		overflow: visible!important;
+		visibility:visible !important;
 	}
 }
 
@@ -18,7 +20,7 @@
 ::-moz-selection{}
 
 
-
+*{.s3-transition();}
 .s3-transition{
     transition:All 0.5s ease-in-out;
     -webkit-transition:All 0.5s ease-in-out;
@@ -49,13 +51,25 @@ Default Wrapper
 /**********************************************
 Relative Default Style Modules
 ***********************************************/
-.right-panel,.left-panel,.top-left-panel,.top-right-panel,.bottom-left-panel,.bottom-right-panel{position:fixed;}
+.right-panel,.left-panel,.top-left-panel,.top-right-panel,.bottom-left-panel,.bottom-right-panel{position:fixed;z-index:99999;}
 .right-panel{top:40%;right:0;#right-panel{}}
 .left-panel{top:40%;left:0;#left-panel{}}
 .top-left-panel{top:0;left:0;#top-left-panel{}}
 .top-right-panel{top:0;right:0;#top-right-panel{}}
 .bottom-left-panel{left:0;bottom:0;#bottom-left-panel{}}
 .bottom-right-panel{right:0;bottom:0;#bottom-right-panel{}}
+
+@media(max-width:786px){
+	.right-panel,
+	.left-panel,
+	.top-left-panel,
+	.top-right-panel,
+	.bottom-left-panel,
+	.bottom-right-panel{
+		position:relative;z-index:99999;
+	}
+}
+
 
 /**********************************************
 Margin or Padding for to each grid 
@@ -75,29 +89,48 @@ i.e. top margin or bottom margin for each grid
 .dc-bottom,
 .dc-footer{
 	position:relative;
-	/* margin-top:@gutter * 2; */ /* top margin 10px as block has gutter */
+	/* margin-bottom:@gutter * 2; */ /* top margin 10px as block has gutter */
 }
 
 .dc-top{}
 .dc-fixed-header{}
 .dc-fixed{}
-.dc-header{}
-.dc-header1,.dc-header2,.dc-header3,.dc-header4{
-	& > .block{
-		z-index:99999;
-		margin:0;
-		padding:0;
+.dc-header{
+	.row{
+		.block{
+			background:none;
+			margin-bottom:0 !important;
+			padding-top:0 !important;
+			padding-bottom:0 !important;
+		}
 	}
-}
-.dc-header1{float:right;}
-.dc-header2{float:right;}
-.dc-header3{float:right;}
-.dc-header4{position:absolute;right:0;bottom:0;}
+	
+	.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
+	@media(min-width:769px){
+		.dc-header1,.dc-header2,.dc-header3,.dc-header4{
+			margin-left:1em;
+		}
+		.dc-header1{
+			float:right;
+		}
+		.dc-header2{
+			float:right;
+		}
+		.dc-header3{
+			float:right;
+		}
+		.dc-header4{
+			float:right;
+		}
+	}
+	
+	@media(max-width:768px){
+		.dc-header1,.dc-header2,.dc-header3,.dc-header4{
+			display:block;float:none;position:relative;
+		}
+	}
 
-@media(max-width:768px){
-	.dc-header1,.dc-header2,.dc-header3,.dc-header4{
-		display:block;float:none;position:relative;
-	}
+
 }
 
 /* Logo */
@@ -105,9 +138,6 @@ i.e. top margin or bottom margin for each grid
 	display:inline-block;
 	img{}
 	img:hover{}
-	@media(min-width:769px){
-		margin-left:@gutter; // block gutter for grid/cols
-	}
 	@media(max-width:768px){
 		display:block;
 		text-align:center;
@@ -116,7 +146,8 @@ i.e. top margin or bottom margin for each grid
 
 /* Menu Modules */
 .dc-menu{
-	.block{padding:0 !important;margin-bottom:0;} /* hide block margin/padding after menu */
+	.block{padding:0 !important;} /* hide block margin/padding after menu */
+	z-index:2;
 }
 
 /**
@@ -124,7 +155,7 @@ i.e. top margin or bottom margin for each grid
  * default background for .block is none for page content area
  */
 .block.dc-page-content{
-  background:none !important;
+	background:none !important;
 }
 
 /* Powered by DiligentCreators */
