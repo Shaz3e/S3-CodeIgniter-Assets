@@ -1,3 +1,19 @@
+<?php
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - S3 CodeIgniter Template based on Shaz3e S3 Framework     ||
+|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
+|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of shaz3e.com                         ||
+|| # for more information visit http://www.shaz3e.com/                  ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
+|| # A project of DiligentCreators - Construcing Ideas...               ||
+|| #################################################################### ||
+\*======================================================================*/
+?>
 <!doctype html>
 <html>
 <head>
@@ -12,10 +28,8 @@
 <script type="text/javascript" src="<?php echo asset_url('js/jquery.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo asset_url('js/jquery-noconflict.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo asset_url('js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo asset_url('js/menu.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo asset_url('js/scripts.js'); ?>"></script>
-
-<?php // Conditional: Files ?>
-
 
 <?php // All CSS files ?>
 <link href="<?php echo asset_url('fonts/fonts.css'); ?>" rel="stylesheet" type="text/css">
@@ -26,17 +40,7 @@
 <?php 
 // Conditional: Files ?>
 <link href="<?php echo asset_url('css/404.css'); ?>" rel="stylesheet" type="text/css">
-
-
-
-
-<!--[if lt IE 9]>
-	<script type="text/javascript" src="<?php echo asset_url('js/html5.js'); ?>"></script>
-	<script type="text/javascript" src="<?php echo asset_url('js/respond.js'); ?>"></script>
-	<link href="<?php echo asset_url('css/ie.css'); ?>" rel="stylesheet" type="text/css">
-<![endif]-->
-
-
+<link href="<?php echo asset_url('css/offline.css'); ?>" rel="stylesheet" type="text/css">
 
 <?php
 /**
@@ -44,8 +48,30 @@
  * comment below lines on production
  */
 ?>
-<link href="<?php echo asset_url('themes/style1/defaults.less'); ?>" rel="stylesheet/less" type="text/css">
+<link href="<?php echo asset_url('themes/style1/style.less'); ?>" rel="stylesheet/less" type="text/css">
 <script type="text/javascript" src="<?php echo asset_url('js/less.js'); ?>"></script>
+
+<?php
+	require('assets/lessc.inc.php');
+
+	$inputFile = "assets/themes/style1/style.less";
+	$outputFile = "assets/themes/style1/style.css";
+	
+	$less = new lessc;
+	$less->setFormatter("compressed");
+	$cache = $less->cachedCompile($inputFile);
+	
+	file_put_contents($outputFile, $cache["compiled"]);
+	
+	$last_updated = $cache["updated"];
+	$cache = $less->cachedCompile($cache);
+	
+	if ($cache["updated"] > $last_updated) {
+		file_put_contents($outputFile, $cache["compiled"]);
+	}
+	
+	echo '<link href="' . asset_url('themes/style1/style.css') . '" rel="stylesheet" type="text/css">';
+?>
 
 <?php // Favicons ?>
 <link rel="shortcut icon" href="<?php echo asset_url('images/favicon/favicon.ico'); ?>">
@@ -66,19 +92,126 @@
 <meta name="msapplication-TileImage" content="<?php echo asset_url('images/favicon/mstile-144x144.png'); ?>">
 <meta name="msapplication-config" content="<?php echo asset_url('images/favicon/browserconfig.xml'); ?>">
 
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="<?php echo asset_url('js/html5.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo asset_url('js/respond.js'); ?>"></script>
+    <link href="<?php echo asset_url('css/ie.css'); ?>" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41080686-1', 'auto'); // Change the UA code with yours and remove this line
+  ga('send', 'pageview');
+
+</script>
 
 </head>
 
 
 <body class="dc-wrapper">
-
-<div class="dc-header dc-clear" id="dc-header">
-	<div class="row">
-    	<div class="dc-logo">
-        	<a href="<?php echo base_url(); ?>" rel="bookmark">
-        	<img src="<?php echo asset_url('images/logo.png'); ?>" alt="Shaz3e">
-            </a>
-        </div>
+<!--[if lt IE 9]>
+    <div class="dc-broswer-alert">
+    	<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><strong>upgrade your browser</strong></a> or <a href="http://www.google.com/chromeframe/?redirect=true"><strong>activate Google Chrome Frame</strong></a> to improve your experience.</p>
     </div>
-</div>
+<![endif]-->
 
+
+<div class="dc-fixed-header">
+	<!-- Header Starts -->
+    <section class="dc-header dc-clear" id="dc-header">
+        <div class="row">
+        	
+            <div class="dc-logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo asset_url('themes/style1/images/logo.png'); ?>"></a></div>
+
+        </div>
+    </section>
+    <!-- Header Ends -->
+
+
+	<!-- Menu Starts -->
+    <section class="dc-menu dc-clear">
+        <div class="row" id="dc-menu">
+        	<div class="block">
+            	<div class="dcMenu">
+                    <div id="dcToggleNav" class="dcToggleNav">
+                        <a href="#"><span>|||</span></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="#">Menu 1</a>
+                            	<ul>
+                                	<li><a href="#">Menu 1.1</a></li>
+                                	<li><a href="#">Menu 1.2</a></li>
+                                	<li><a href="#">Menu 1.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Menu 2</a>
+                            	<ul>
+                                	<li><a href="#">Menu 2.1</a></li>
+                                	<li><a href="#">Menu 2.2</a></li>
+                                	<li><a href="#">Menu 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">List Items</a>
+                            	<ul>
+                                	<li><a href="#">List Item 1.0</a>
+                                        <ul>
+                                            <li><a href="#">Menu 1.1</a></li>
+                                            <li><a href="#">Menu 1.2</a></li>
+                                            <li><a href="#">Menu 1.3</a></li>
+                                        </ul>
+                                    </li>
+                                	<li><a href="#">List Item 2.0</a>
+                                        <ul>
+                                            <li><a href="#">Menu 2.1</a></li>
+                                            <li><a href="#">Menu 2.2</a></li>
+                                            <li><a href="#">Menu 2.3</a></li>
+                                        </ul>
+                                    </li>
+                                	<li><a href="#">List Item 3.0</a>
+                                        <ul>
+                                            <li><a href="#">Menu 2.1</a></li>
+                                            <li><a href="#">Menu 2.2</a></li>
+                                            <li><a href="#">Menu 2.3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">5 level Drop Down</a>
+                                    	<ul>
+                                        	<li><a href="#">1st Level</a>
+                                                <ul>
+                                                    <li><a href="#">2nd Level</a>
+                                                        <ul>
+                                                            <li><a href="#">3rd Level</a>
+                                                                <ul>
+                                                                    <li><a href="#">4th Level</a>
+                                                                        <ul>
+                                                                            <li><a href="#">5th Level</a>
+                                                                                <ul>
+                                                                                    <li><a href="#">This is not the end</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>        
+    </section>
+	<!-- Menu Ends -->
+</div>
