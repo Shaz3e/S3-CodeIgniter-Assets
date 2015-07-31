@@ -2,7 +2,7 @@
 ####Create beautiful responsive Joomla templates more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3 CodeIgniter Assets-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.2.4-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-2.2.5-green.svg)](http://www.shaz3e.com)
 ![http://img.shields.io/badge/LICENSE-MIT-blue.svg](http://img.shields.io/badge/LICENSE-MIT-blue.svg)
 
 
