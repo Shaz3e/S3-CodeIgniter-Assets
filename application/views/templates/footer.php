@@ -37,5 +37,11 @@
     </div>
 </section>
 
+<?php //All JS Files ?>
+<script type="text/javascript" src="<?php echo asset_url('js/jquery.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo asset_url('js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo asset_url('js/menu.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo asset_url('js/scripts.js'); ?>"></script>
+
 </body>
 </html>

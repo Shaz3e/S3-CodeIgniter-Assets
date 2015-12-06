@@ -24,13 +24,6 @@
 
 <title><?php echo $title; ?></title>
 
-<?php //All JS Files ?>
-<script type="text/javascript" src="<?php echo asset_url('js/jquery.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo asset_url('js/jquery-noconflict.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo asset_url('js/bootstrap.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo asset_url('js/menu.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo asset_url('js/scripts.js'); ?>"></script>
-
 <?php // All CSS files ?>
 <link href="<?php echo asset_url('fonts/fonts.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo asset_url('font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
@@ -142,7 +135,7 @@
                     </div>
                     <nav>
                         <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="<?php echo activate_menu('home'); ?>"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li><a href="#">Menu 1</a>
                             	<ul>
                                 	<li><a href="#">Menu 1.1</a></li>
