@@ -26,11 +26,15 @@
 All you need to do is to  download it and extract all files to your **root application**
 
  - Open autoload.php under application/config/autoload.php
-  - **Find** $autoload['helper'] = array();
-  - **Replace** $autoload['helper'] = array('url', 'assets');
+  - **Find** `$autoload['helper'] = array();`
+  - **Replace** `$autoload['helper'] = array('url', 'assets');`
  - Open config.php under application/config/config.php
-  - **Find** $config['base_url']	= 'index.php';
-  - **Replace** $config['base_url']	= '/';
+  - **Find** `$config['base_url']	= 'index.php';`
+  - **Replace** `$config['base_url']	= '/';`
+ - Change controller name
+  - Open routs.php under application/config/routs.php
+  - **Fine** `$route['default_controller'] = 'Welcome';`
+  - **Replace** `$route['default_controller'] = 'home';`
 
 How to use Active menu classes in template
  - Open autoload.php under application/config/autoload.php
