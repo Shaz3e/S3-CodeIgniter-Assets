@@ -2,7 +2,7 @@
 ####Create beautiful responsive Joomla templates more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3 CodeIgniter Assets-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.2.6-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-2.2.7-green.svg)](http://www.shaz3e.com)
 ![http://img.shields.io/badge/LICENSE-MIT-blue.svg](http://img.shields.io/badge/LICENSE-MIT-blue.svg)
 
 
@@ -20,7 +20,7 @@
  - Custom theme's module styles with themes/style1/theme_modules.less file
  - Less Development Mode Enable / Disable
  - Use Google Analytics Code
- - Compatible with CI 2.2.x or 3.0.x
+ - Compatible with CI 3.1.x
 
 ### How to use it?
 All you need to do is to  download it and extract all files to your **root application**
@@ -30,7 +30,7 @@ All you need to do is to  download it and extract all files to your **root appli
   - **Replace** $autoload['helper'] = array('url', 'assets');
  - Open config.php under application/config/config.php
   - **Find** $config['base_url']	= 'index.php';
-  - **Replace** $config['base_url']	= '';
+  - **Replace** $config['base_url']	= '/';
 
 How to use Active menu classes in template
  - Open autoload.php under application/config/autoload.php
