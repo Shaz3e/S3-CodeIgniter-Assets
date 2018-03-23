@@ -1,5 +1,5 @@
 ## S3 CodeIgniter-Assets
-**Create beautiful responsive Joomla templates more easier and faster.**
+**Create beautiful responsive CodeIgniter Applications more easier and faster.**
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
 [![Version](http://img.shields.io/badge/Version-2.2.7-green.svg)](http://www.shaz3e.com)
