@@ -4,7 +4,7 @@
 [![S3Framework](http://img.shields.io/badge/S3-CodeIgniter-Assets-Stable-blue.svg)](http://www.shaz3e.com)
 [![Version](http://img.shields.io/badge/Version-2.2.7-green.svg)](http://www.shaz3e.com)
 [![License](http://img.shields.io/badge/LICENSE-MIT-blue.svg)](http://opensource.org/licenses/mit-license.html)
-[![Build Status](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
+[![Build Status](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets.svg)](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets)
 
 ### Why you should use it?
 **S3 CodeIgniter Assets** is easy to use for custom Header & Footer auto load in your PHP Application and rapid build your responsive application.
