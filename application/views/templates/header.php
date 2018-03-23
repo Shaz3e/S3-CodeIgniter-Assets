@@ -22,7 +22,7 @@
 <meta name="viewport" content="width=device-width, intial-scale=1, maximum-scale=1, user-scaleable=no">
 <meta charset="utf-8">
 
-<title><?php echo $title; ?></title>
+<title><?php echo isset($title) ? $title : 'My Application Title' ; ?></title>
 
 <?php // All CSS files ?>
 <link href="<?php echo asset_url('fonts/fonts.css'); ?>" rel="stylesheet" type="text/css">
@@ -45,25 +45,25 @@
 <script type="text/javascript" src="<?php echo asset_url('js/less.js'); ?>"></script>
 
 <?php
-	require('assets/lessc.inc.php');
+    require('assets/lessc.inc.php');
 
-	$inputFile = "assets/themes/styles/theme1.less";
-	$outputFile = "assets/themes/style.css";
-	
-	$less = new lessc;
-	$less->setFormatter("compressed");
-	$cache = $less->cachedCompile($inputFile);
-	
-	file_put_contents($outputFile, $cache["compiled"]);
-	
-	$last_updated = $cache["updated"];
-	$cache = $less->cachedCompile($cache);
-	
-	if ($cache["updated"] > $last_updated) {
-		file_put_contents($outputFile, $cache["compiled"]);
-	}
-	
-	echo '<link href="' . asset_url('themes/style.css') . '" rel="stylesheet" type="text/css">';
+    $inputFile = "assets/themes/styles/theme1.less";
+    $outputFile = "assets/themes/style.css";
+    
+    $less = new lessc;
+    $less->setFormatter("compressed");
+    $cache = $less->cachedCompile($inputFile);
+    
+    file_put_contents($outputFile, $cache["compiled"]);
+    
+    $last_updated = $cache["updated"];
+    $cache = $less->cachedCompile($cache);
+    
+    if ($cache["updated"] > $last_updated) {
+        file_put_contents($outputFile, $cache["compiled"]);
+    }
+    
+    echo '<link href="' . asset_url('themes/style.css') . '" rel="stylesheet" type="text/css">';
 ?>
 
 <?php // Favicons ?>
@@ -112,16 +112,16 @@
 <body class="dc-wrapper">
 <!--[if lt IE 9]>
     <div class="dc-broswer-alert">
-    	<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><strong>upgrade your browser</strong></a> or <a href="http://www.google.com/chromeframe/?redirect=true"><strong>activate Google Chrome Frame</strong></a> to improve your experience.</p>
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><strong>upgrade your browser</strong></a> or <a href="http://www.google.com/chromeframe/?redirect=true"><strong>activate Google Chrome Frame</strong></a> to improve your experience.</p>
     </div>
 <![endif]-->
 
 
 <div class="dc-fixed-header">
-	<!-- Header Starts -->
+    <!-- Header Starts -->
     <section class="dc-header dc-clear" id="dc-header">
         <div class="row">
-        	
+            
             <div class="dc-logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo asset_url('themes/images/logo.png'); ?>"></a></div>
 
         </div>
@@ -129,11 +129,11 @@
     <!-- Header Ends -->
 
 
-	<!-- Menu Starts -->
+    <!-- Menu Starts -->
     <section class="dc-menu dc-clear">
         <div class="row" id="dc-menu">
-        	<div class="block">
-            	<div class="dcMenu">
+            <div class="block">
+                <div class="dcMenu">
                     <div id="dcToggleNav" class="dcToggleNav">
                         <a href="#"><span>|||</span></a>
                     </div>
@@ -141,36 +141,36 @@
                         <ul>
                             <li class="<?php echo activate_menu('home'); ?>"><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li><a href="#">Menu 1</a>
-                            	<ul>
-                                	<li><a href="#">Menu 1.1</a></li>
-                                	<li><a href="#">Menu 1.2</a></li>
-                                	<li><a href="#">Menu 1.3</a></li>
+                                <ul>
+                                    <li><a href="#">Menu 1.1</a></li>
+                                    <li><a href="#">Menu 1.2</a></li>
+                                    <li><a href="#">Menu 1.3</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Menu 2</a>
-                            	<ul>
-                                	<li><a href="#">Menu 2.1</a></li>
-                                	<li><a href="#">Menu 2.2</a></li>
-                                	<li><a href="#">Menu 2.3</a></li>
+                                <ul>
+                                    <li><a href="#">Menu 2.1</a></li>
+                                    <li><a href="#">Menu 2.2</a></li>
+                                    <li><a href="#">Menu 2.3</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">List Items</a>
-                            	<ul>
-                                	<li><a href="#">List Item 1.0</a>
+                                <ul>
+                                    <li><a href="#">List Item 1.0</a>
                                         <ul>
                                             <li><a href="#">Menu 1.1</a></li>
                                             <li><a href="#">Menu 1.2</a></li>
                                             <li><a href="#">Menu 1.3</a></li>
                                         </ul>
                                     </li>
-                                	<li><a href="#">List Item 2.0</a>
+                                    <li><a href="#">List Item 2.0</a>
                                         <ul>
                                             <li><a href="#">Menu 2.1</a></li>
                                             <li><a href="#">Menu 2.2</a></li>
                                             <li><a href="#">Menu 2.3</a></li>
                                         </ul>
                                     </li>
-                                	<li><a href="#">List Item 3.0</a>
+                                    <li><a href="#">List Item 3.0</a>
                                         <ul>
                                             <li><a href="#">Menu 3.1</a></li>
                                             <li><a href="#">Menu 3.2</a></li>
@@ -178,8 +178,8 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">5 level Drop Down</a>
-                                    	<ul>
-                                        	<li><a href="#">1st Level</a>
+                                        <ul>
+                                            <li><a href="#">1st Level</a>
                                                 <ul>
                                                     <li><a href="#">2nd Level</a>
                                                         <ul>
@@ -210,5 +210,5 @@
             </div>
         </div>        
     </section>
-	<!-- Menu Ends -->
+    <!-- Menu Ends -->
 </div>

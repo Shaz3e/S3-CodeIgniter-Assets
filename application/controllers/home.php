@@ -21,9 +21,13 @@ class Home extends CI_Controller {
 		/**
 		 * load->template('template_name',$data)
 		 * 
-		 * $params string
+		 * @params string
 		 */
 		$this->load->template('home', $data);
+		/**
+		 * Get auto title from application/views/templates/header.php
+		 */
+		//$this->load->template('home');
 	}
 
 }
