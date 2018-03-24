@@ -2,25 +2,17 @@
 **Create beautiful responsive CodeIgniter Applications more easier and faster.**
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.2.7-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-3-green.svg)](http://www.shaz3e.com)
 [![License](http://img.shields.io/badge/LICENSE-MIT-blue.svg)](http://opensource.org/licenses/mit-license.html)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets.svg)](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets)
 
 ### Why you should use it?
 **S3 CodeIgniter Assets** is easy to use for custom Header & Footer auto load in your PHP Application and rapid build your responsive application.
-**S3 CodeIgniter** is using S3 Framework Themes intigrated with Bootstrap and lesscss compiler
 
 ### Features
- - 12 Columns Grid System
- - 300+ Module Positions
- - Full width Modules
- - Suitable with any design
- - IE7 and IE8 Supported
- - Choose from Different Styles
- - Custom theme's module styles with themes/style1/theme_modules.less file
- - Less Development Mode Enable / Disable
- - Use Google Analytics Code
- - Compatible with CI 3.1.x
+- Bootstrap 4.x Supported
+- Fontawesome v5.0.8 Supported
+- Less Complier
 
 ### How to use it?
 All you need to do is to  download it and extract all files to your **root application**

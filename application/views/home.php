@@ -1,5 +1,1 @@
-<?php
-	/**
-	 * write your own code here
-	 */
-?>
+S3 Codeigniter Assets
