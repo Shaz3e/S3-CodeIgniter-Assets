@@ -2,7 +2,7 @@
 **Create beautiful responsive CodeIgniter Applications more easier and faster.**
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-3-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-3.0.1-green.svg)](http://www.shaz3e.com)
 [![License](http://img.shields.io/badge/LICENSE-MIT-blue.svg)](http://opensource.org/licenses/mit-license.html)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets.svg)](https://travis-ci.org/Shaz3e/S3-CodeIgniter-Assets)
 
@@ -11,7 +11,7 @@
 
 ### Features
 - Bootstrap 4.x Supported
-- Fontawesome v5.0.8 Supported
+- Fontawesome v5.0.9 Supported
 - Less Complier
 
 ### How to use it?
