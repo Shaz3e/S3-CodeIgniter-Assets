@@ -10,8 +10,8 @@
 **S3 CodeIgniter Assets** is easy to use for custom Header & Footer auto load in your PHP Application and rapid build your responsive application.
 
 ### Features
-- Bootstrap 4.x Supported
-- Fontawesome v5.0.9 Supported
+- Bootstrap 4.1.1 Supported
+- Fontawesome v5.1.0 Supported
 - Less Complier
 
 ### How to use it?
