@@ -25,7 +25,7 @@ All you need to do is to  download it and extract all files to your **root appli
   - **Replace** `$config['base_url']	= '/';`
  - Change controller name
   - Open routs.php under application/config/routs.php
-  - **Fine** `$route['default_controller'] = 'Welcome';`
+  - **Find** `$route['default_controller'] = 'Welcome';`
   - **Replace** `$route['default_controller'] = 'home';`
 
 How to use Active menu classes in template
